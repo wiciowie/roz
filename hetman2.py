@@ -4,19 +4,21 @@ class Szachy:
     self.szachownica = szachownica
 
   def sprawdzanie(szachownica, wiersz, kolumna):
-    suma = 0
-    for i in range(kolumna):
-      suma == szachownica[wiersz][i] + szachownica[wiersz][i + 1]
-      if suma >= 1:
-        return False
-
+    for a in range(wiersz):
+        for i in range(kolumna):
+            if szachownica[a][i] == 1:
+                return False
+            else:
+                continue
 
 x = Szachy.szachownica = [[1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0],
                           [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0],
                           [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0],
                           [0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0]]
 
-if Szachy.sprawdzanie(x, 0, 0) == False:
+wiersz = len(x)
+kolumna = len(x[0])
+if Szachy.sprawdzanie(x, wiersz,kolumna ) == False:
   print("Hetmany sa w niewlasciwej pozycji, bledne rozwiazanie")
 else:
   print("Rozwiazanie poprawne")
