@@ -1,0 +1,25 @@
+def sprawdzanie_poziom(pozycja,iks, igrek):
+    pozycja_new = sorted(pozycja, key=lambda x: x[0])
+    pozycja_new = sorted(pozycja, key=lambda x: x[1])
+    print(pozycja_new)
+    #for a in range(iks):
+        #for i in range(igrek -1):
+            #if pozycja[a][i] == pozycja[a][i,8]:
+                #return False
+
+
+pozycja = []
+for i in range(8):
+    poz = []
+    x = input("Podaj pozycje hetmana "+ str(i+1) +" na x: ")
+    y = input("Podaj pozycje hetmana "+ str(i+1)+ " na y: ")
+    int(x)
+    int(y)
+    poz.append(x)
+    poz.append(y)
+    pozycja.append(poz)
+#print(pozycja)
+wiersz = len(pozycja)
+kolumna = len(pozycja[0])
+if sprawdzanie_poziom(pozycja, wiersz, kolumna) == False:
+    print("Rozwiazanie błędne")
